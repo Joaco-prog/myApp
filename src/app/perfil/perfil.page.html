@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons>
+      <ion-menu-buttons></ion-menu-buttons>
+    </ion-buttons>
+    
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <button types="button" [routerlink]="'/home'" class="btn brn-dark">Ir home</button>
+  <button types="button" [routerlink]="'/detalles'" class="btn brn-dark">detalles</button>
+  <button types="button" [routerlink]="'/Ayuda'" class="btn brn-dark">Ir Ayuda</button>
+
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="errorlogin">
+      Te equivocaste bro
+    </div>
+    <button type="submit" class="btn btn-primary"(click)="login()">Submit</button>
+  </form>
+
+</ion-content>

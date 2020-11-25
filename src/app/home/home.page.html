@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"> Valor 1 </label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Valor 1">
+    <small id="emailHelp" class="form-text text-muted">Pon el valor que quieras.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"> Valor 2 </label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Valor 2">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+  {{variable}}
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div id="container">
+    Valor 1:
+    <input type="text" name="" id="" [(ngModel)]="variable"/>
+    <input type="text" name="" id="" [(ngModel)]="variable2"/>
+    <br/>
+    <span style="color: red">Valor 2;</span>
+    <strong *ngIf="variable > 10" > Variable > 10 </strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    {{'El resultado de la ' + operacion + ' es : ' + resultado}}
+  
+
+    <button type="button" class="btn btn-primary"  (click)="sumar()">sumar</button>
+    <button type="button" class="btn btn-danger"  (click)="multipicar()">multiplicar</button>
+    <button type="button" class="btn btn-warning"  (click)="dividir()">dividir</button>
+    <button type="button" class="btn btn-dark"  (click)="restar()">restar</button>
+  </div>
+</ion-content>
+
+
