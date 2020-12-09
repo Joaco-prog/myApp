@@ -10,7 +10,7 @@ export class FormularioPage implements OnInit {
 nombre ="";
 precio = 0;
 
-productos = [];
+producto = [];
 
 constructor() { }
 

@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacto.page.scss'],
 })
 export class ContactoPage implements OnInit {
+nombre ="";
+precio = 0;
 
-  constructor() { }
+producto = [];
 
-  ngOnInit() {
+constructor() { }
+
+ngOnInit() {
+}
+  
+guardarProducto(){
+  this.producto.push({
+    nombre: this.nombre,
+    precio: this.precio
+  });
+
+  this.nombre = "";
+  this.precio = 0;
+
+  console.log("Guardar producto");
   }
-
 }
