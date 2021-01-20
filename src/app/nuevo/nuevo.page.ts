@@ -13,9 +13,16 @@ export class NuevoPage implements OnInit {
     email: ''
   }
 
-  constructor() { }
+  constructor(
+    public firebaseService: FirebaseService
+  ) { }
 
   ngOnInit() {
+  }
+
+  guardar() {
+    this.firebaseService.agregarContacto(this.contacto)
+      .them(respuesta => console.log(respuesta));
   }
 
 }
