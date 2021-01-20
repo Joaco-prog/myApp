@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuevo contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form>
+    <div class="form-group">
+      <label for="exampleNombre">Nombre</label>
+      <input type="text" class="form-control" id="exampleInputNombre1" name="nombre" placeholder="Nombre" [(ngModel)]='contacto.nombre' >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]='contacto.email'> 
+    </div> 
+    <button type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+  </form>
+  
+</ion-content>
