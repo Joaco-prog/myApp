@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { Contacto } from 'src/models/contacto.model';
 
 
@@ -8,14 +8,25 @@ import { Contacto } from 'src/models/contacto.model';
 })
 export class BasededatosService {
 
-  private referenciaContactos = this.db.list<Contacto>('listaContactos');
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(
 
-  getListaContactos() {
-    return this.ListaContactosRef;
+    private http: HttpClient
+  ) {}
+
+  getLista() {
   }
   agregarContactos(contacto: Contacto) {
-    return this.listaContactosRef.push(contacto);
+    https://proyecto-coolj-default-rtdb.firebaseio.com/contactos.json',contacto)
+    .subscribe(
+      //Correcto
+      (corr) => {
+        console.log(corr);
+      },
+      //Incorrecto
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
